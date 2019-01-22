@@ -15,19 +15,28 @@ Dado("que eu tenha acessado o portal") do
     assert_text('Nome')
   end
   
-  Quando("preencher os campos nome {string} - email {string} - estado {string} - cidade {string} - pais {string} - cor raça {string}") do |string, string2, string3, string4, string5, string6| 
+  Quando("preencher os campos nome {string} - email {string} - estado {string} - cidade {string} - pais {string} - cor raça {string}") do |arg1, arg2, arg3, arg4, arg5, arg6| 
     steps %q{
         Dado que eu tenha acessado o portal
         E acessado o menu contato
         Quando clicar no fale conosco
     }
-    sleep 3
+    fill_in('nome',:with=>arg1)
+    fill_in('email',:with=>arg2)
+    fill_in('estado',:with=>arg3)
+    fill_in('cidade',:with=>arg4)
+    fill_in('pais',:with=>arg5)
+    fill_in('cor',:with=>arg6)
+    fill_in('mensagem',:with=>'preguiça de fazer')
+    
+
   end
   
   Quando("clicar em Enviar") do
-    pending # Write code here that turns the phrase above into concrete actions
+    find('.wpcf7-form-control.wpcf7-submit.btn.send-btn.btn-success').click
   end
   
   Então("sistema exibi mensagem") do
-    pending # Write code here that turns the phrase above into concrete actions
+    assert_text('Agradecemos a sua mensagem.
+      ')
   end
