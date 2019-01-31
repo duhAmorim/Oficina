@@ -13,10 +13,10 @@
 #PARA detalhar melhor o Relatório de Vistoria Ambiental.
 
 
-@boi
-Funcionalidade: Verificar criação do Boletim de Ocorrencia
+@boiMapa
+Funcionalidade: Verificar criação do mapa
 
-Cenario: Preencher fomulario do boi
+Cenario: Preencher fomulario do boi mapa
 
 Dado acessado o SIGAM
 E estar clicado em logar
@@ -26,4 +26,9 @@ Quando Acessar o menu de incendios florestais
 E clicar em Adicionar
 E preencher todos os campos
 E clicar em atualizar
-Então sistema deve gerar um código de para o BOI
+#todo bdd para cima já esta codificado em outros momentos, logo a automação procura por eles, acha em outros arquivos e executa
+E clicar aba mapa
+E clicar em desenhar
+E fazer o poligono
+E preencher os atributos
+Então poligono é desenhado
