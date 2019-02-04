@@ -10,9 +10,10 @@ end
   end
   
   Dado("logado com usuario {string} e senha {string}") do |usuario, senha | #recebo os valores pelo bdd usando as variaveis Usuario e senha
-    find('input[name="username"]').set usuario #O .set indica que vamos inserir dados neste elemento e após coloco o valor a ser inserido por meio da variavel usuario
-    fill_in('password', :with => senha) #o fill_in inseri dados nos elemento pelo seu name
-    
+    @logar = Login.new
+    nomeUsuarioLogado = nill
+    nomeUsuarioLogado = @logar.preencherCampos(usuario,senha)
+    puts nomeUsuarioLogado
   end
   
   Dado("ter clicado em Acessar") do
