@@ -21,7 +21,6 @@ Cenario: Preencher fomulario do boi
 Dado acessado o SIGAM
 E estar clicado em logar
 E logado com usuario 'gtiAdm' e senha 'a'
-E ter clicado em Acessar
 Quando Acessar o menu de incendios florestais
 E clicar em Adicionar
 E preencher todos os campos
