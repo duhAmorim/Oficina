@@ -6,6 +6,7 @@ require 'Capybara'
 require 'Capybara/cucumber'
 require 'capybara/dsl'
 require 'pry'
+require 'site_prism'
 
 include Capybara::DSL
 
