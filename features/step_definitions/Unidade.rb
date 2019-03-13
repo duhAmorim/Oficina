@@ -12,23 +12,30 @@ Dado("que tenha acessado o Sigam") do
     @ll = Login.new
     @ll.usuario.set string
     @ll.senha.set string2
-    sleep 5
+    
   end
   
   Dado("clicar em Acessar") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @ll = Login.new
+    @ll.btnXXX.click
   end
   
   Dado("clicar em Portal") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @SH = SigamHome.new
+    @SH.menuPortal.hover
+    sleep 2
   end
   
   Dado("clicar em Tabelas Organizacionais") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @SH = SigamHome.new
+    @SH.subMenuTabelasOrganizacionais.hover
+    sleep 2
   end
   
   Dado("clicar em Unidades") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @SH = SigamHome.new
+    @SH.subMenuUnidade.click
+    sleep 2
   end
   
   Dado("clicar em novo") do
