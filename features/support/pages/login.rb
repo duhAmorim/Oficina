@@ -1,5 +1,5 @@
 class Login <SitePrism::Page
-    set_url 'https://exec-dev01.sma.local/sigam-pre-prod'
+    set_url 'https://homologacao-sigam.eastus2.cloudapp.azure.com/sigam-sipai-test'
     element :btnLogar,'.Entrar'
 
     element :usuario,'#username'

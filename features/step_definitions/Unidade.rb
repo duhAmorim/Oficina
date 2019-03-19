@@ -34,12 +34,14 @@ Dado("que tenha acessado o Sigam") do
   
   Dado("clicar em Unidades") do
     @SH = SigamHome.new
-    @SH.subMenuUnidade.click
+    @SH.subMenuUnidade[1].click
     sleep 2
   end
   
   Dado("clicar em novo") do
-    pending # Write code here that turns the phrase above into concrete actions
+   @uni = Unidade.new
+   @uni.adiciona.click
+   sleep 2
   end
   
   Quando("Preencher os dados obrigatorios sigla {string} - Nome da Unidade {string} - Órgão {string} - Municipio {string} - Responsável {string} - Unidade Superior {string}") do |string, string2, string3, string4, string5, string6|
