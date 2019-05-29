@@ -13,9 +13,9 @@
 #PARA detalhar melhor o Relatório de Vistoria Ambiental.
 
 
-@boi
+@boi @Sipai @sipaiSprint7
 Funcionalidade: Verificar criação do Boletim de Ocorrencia
-
+@boiForm
 Cenario: Preencher fomulario do boi
 
 Dado acessado o SIGAM

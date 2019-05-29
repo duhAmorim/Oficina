@@ -5,5 +5,5 @@ class Login <SitePrism::Page
     element :usuario,'#username'
     element :senha,'#password'
 
-    element :btnXXX,'#login'
+    element :btnXXX,'#login' 
 end
